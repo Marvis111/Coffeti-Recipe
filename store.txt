@@ -1,0 +1,27 @@
+ req.skip = false;
+        const username = req.body.username,
+        email = req.body.email,
+        password = req.body.password;
+        
+
+if(username == ""){
+            loginErr.push("Username is required");   
+        };
+        if(email == ""){
+            loginErr.push("User Email is required.");
+        };
+        if(password == ""){
+            loginErr.push("Password is required.");
+        };
+        if(loginErr.length > 0 ){
+            res.locals.redirect = '/users/new';
+            req.skip = true;
+            req.flash('error',loginErr);
+            loginErr =[];
+        
+            
+        }else{
+            req.skip = false;
+            
+        }
+        next();

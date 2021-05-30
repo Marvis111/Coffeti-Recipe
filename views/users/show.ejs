@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Confetti Recipe|| App</title>
+ <!-- JQUERY... -->
+ <meta http-equiv="refesh" content="3">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Keywords" content=" ">
+  <meta name="description" content="">
+<script type="text/javascript" src="../../jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery/jquery.js"></script>
+  <script type="text/javascript" src="jquery/jquery-ui.js">
+  </script>
+  <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.min.css">
+  
+  <!-- BOOSTSRAP scripts... -->
+<script type="text/javascript" src="../../bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../fonts/icomoon/style.css">
+   <!-- CSS scripts... -->
+   <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+
+ <!--JS scripts... -->
+  <!-- REACT scripts... 
+  <script type="text/javascript" src="react-0.14.3/build/react.js"></script>
+  <script type="text/javascript" src="react-0.14.3/build/react.min.js"></script>
+  <script type="text/javascript" src="react-0.14.3/build/react-dom.js"></script>
+  <script type="text/javascript" src="react-0.14.3/build/browser.min.js"></script>
+  <script type="text/javascript" src="react-0.14.3/build/babel.min.js"></script>
+-->
+</head>	
+<body>
+<nav class="navbar navbar-expand-md navbar-dark">
+
+<a class="navbar-brand" href="#">
+    <span>CONFETTI</span>
+  </a>
+
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="nav-link" href="/"><i class="icon-home"> Home</i></a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link" href="/courses/index"><i class="icon-book"> Courses</i></a>
+      </li> 
+       <li class="nav-item">
+        <a class="nav-link" href="users/login"><i class="icon-user"> Login</i></a>
+      </li> 
+       <li class="nav-item">
+        <a class="nav-link" href="/subscribers/index"><i class="icon-group"> Users</i></a>
+      </li> 
+    </ul>
+  </div> 
+</nav>
+<section class="">
+    <% if(flashMessages){ %>
+        <% if(flashMessages.success){ %>
+        <div class="alert alert-success alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong><%= flashMessages.success %>!</strong>
+    </div>
+     <% } else if (flashMessages.error){ %>
+      <div class="alert alert-danger alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong><%= flashMessages.error %>!</strong>
+    </div>
+      <% } %>
+        <% } %>
+
+        <div class="justify-content-center" style="margin: 5px auto !important;">
+    <h3 class="text text-secondary justify-content-center "
+     style="text-align: center !important;font-family:'Open Sans Semi-bold' ;">
+     User data for <%= username %> </h3>
+    </div>
+    <hr>
+    <div class="user-details">
+        <span class="data" style="font-weight: bold;">Name:</span>
+        <%= username %>
+    </div>
+    <div class="user-details">
+        <span class="data" style="font-weight: bold;">Email:</span>
+        <%= useremail %>
+    </div>
+    <div class="user-details">
+        <span class="data" style="font-weight: bold;">Password:</span>
+        <%= userPassword %>
+    </div>
+
+<h3>This user has a subscribed Account</h3>
+<div class="set-user">
+    <div class="set">
+        <a href="">View all Users</a>
+    </div>
+    <div class="set">
+        <a href="">Edit user Details</a>
+    </div>
+    <div class="set">
+        <a href="">Delete</a>
+    </div>
+</div>
+
+
+
+</section>
+<style>
+
+    .set{
+        margin-bottom: 10px;
+        margin-left: 100px;;
+        justify-content: center;
+        text-align: center;
+        padding:5px 10px;
+        width: fit-content;
+        background:rgb(67, 105, 163);
+    }
+    a{
+        color: whitesmoke;
+    }
+</style>
+</body>
+
+
+</html>
